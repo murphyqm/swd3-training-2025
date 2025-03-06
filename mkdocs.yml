@@ -1,0 +1,11 @@
+site_name: Triangle
+
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [src]  # search packages in the src folder
+
+nav:
+  - FILE NAME HERE: index.md
