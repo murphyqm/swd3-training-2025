@@ -3,6 +3,7 @@
 # One to calculate the square root of those added together
 # a**2 + b**2 = c**2
 # need to import numpy, etc.
+import numpy as np
 
 # Function to get the squares of opp and adj
 # Inputs/args: opp and adj (a and b)
@@ -19,6 +20,14 @@ def squares(opp, adj):
 
 def hypot(opp_sq, adj_sq):
     sum_o_a = opp_sq + adj_sq
-    sqrt = (sum_o_a)**0.5
+    sqrt = np.sqrt(sum_o_a)
     return sqrt
-    
+
+
+# Function to pull these together and calculate
+# the hypotenuse given the sides
+
+def pythag(opp, adj):
+    opp_sq, adj_sq = squares(opp, adj)
+    hypotenuse = hypot(opp_sq, adj_sq)
+    return hypotenuse
